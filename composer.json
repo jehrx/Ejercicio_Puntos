@@ -1,0 +1,22 @@
+{
+    "require": {
+        "php": ">=8"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+
+    },
+    "autoload": {
+        
+        "psr-4": {
+            "ITEC\\DAW\\PROGRAMACION\\examen\\": "src/c/Ejercicio_Puntos"
+        }
+    
+    },
+    "autoload-dev":{
+      
+        "psr-4":{
+            "ITEC\\DAW\\PROGRAMACION\\examen\\": "src/classes/Ejercicio_Puntos"
+        }
+    }
+}
