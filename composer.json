@@ -9,14 +9,14 @@
     "autoload": {
         
         "psr-4": {
-            "ITEC\\DAW\\PROGRAMACION\\examen\\": "src/c/Ejercicio_Puntos"
+            "ITEC\\DAW\\PROGRAMACION\\puntos\\": "src/c/Ejercicio_Puntos"
         }
     
     },
     "autoload-dev":{
       
         "psr-4":{
-            "ITEC\\DAW\\PROGRAMACION\\examen\\": "src/classes/Ejercicio_Puntos"
+            "ITEC\\DAW\\PROGRAMACION\\puntos\\": "src/classes/Ejercicio_Puntos"
         }
     }
 }
