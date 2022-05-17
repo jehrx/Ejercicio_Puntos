@@ -22,12 +22,12 @@ PUNTO 4 -> Implementar por herencia cuadrado, círculo y rectángulo. todos ello
     private int $ejeY;
 
     public function __construct(int $ejeX, int $ejeY){
-        $this->atributo1 = $ejeX;
-        $this->atributo2 = $ejeY; 
+        $this->ejeX = $ejeX;
+        $this->ejeY = $ejeY; 
     }
 
-    public function avanza(int $ejeX, int $ejeY){
-
+    public static function nuevoPunto(int $ejeX, int $ejeY){
+        return new punto($ejeX, $ejeY);
     }
 
 
