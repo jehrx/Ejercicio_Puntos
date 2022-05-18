@@ -16,25 +16,56 @@ PUNTO 4 -> Implementar por herencia cuadrado, círculo y rectángulo. todos ello
 
 */
 
- class punto{
-     
-    private int $ejeX;
-    private int $ejeY;
+// punto
 
-    public function __construct(int $ejeX, int $ejeY){
-        $this->ejeX = $ejeX;
-        $this->ejeY = $ejeY; 
+namespace ITEC\DAW\PROGRAMACION\puntos;
+
+class Punto{
+    private int $x;
+    private int $y;
+
+    public function __construct(int $x = 0, int $y = 0) { //Le pongo 0 para que sea inicializando en 0
+        $this->x = $x;
+        $this->y = $y
     }
 
-    public static function nuevoPunto(int $ejeX, int $ejeY){
-        return new punto($ejeX, $ejeY);
+    public function setPosition(int $x, int $y){
+        $this->x = $x;
+        $this->y = $y;
+    }
+    
+    public function move(int $direccionx, int $direcciony){ //Para el movimiento relativo cuantas casillas se mueven en cada eje
+        $this->x += $direccionx;
+        $this->y += $direcciony;
+    } 
+
+    public function getPosition(){ //Devolviendo las coordenadas que ya se tienen
+        return[
+            "x" => $this->x,
+            "y" => $this->y
+        ];
+    }
+
+    public function copy(Punto $punto){  //Creamos un tipo punto, de su clase.
+        $coordenadas = $punto->getPosition(); //va a coger las coordenadas de otro punto y lo copia.
+
+        $this->setPosition($coordenadas["x"], $coordenadas["y"]);  // Ahora se le da a este punto las coordenadas del anterior
+    }
+
+    public function distanceTo(Punto $punto){ //Para calcular la distancia entre dos puntos. 
+        $positionB = punto->getPostion();
+
+        $distanceX = $positionB["x"] - $this->x;
+        $distanceY = $positionB["y"] - $this->y;
+
+        return sqrt($distanceX * $distance + $distanceY * $distanceY); //e
+
     }
 
 
+}
 
 
- }
- 
 
 
 
