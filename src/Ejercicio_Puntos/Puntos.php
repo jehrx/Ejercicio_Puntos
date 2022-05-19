@@ -26,7 +26,7 @@ class Punto{
 
     public function __construct(int $x = 0, int $y = 0) { //Le pongo 0 para que sea inicializando en 0
         $this->x = $x;
-        $this->y = $y
+        $this->y = $y;
     }
 
     public function setPosition(int $x, int $y){
@@ -58,7 +58,7 @@ class Punto{
         $distanceX = $positionB["x"] - $this->x;
         $distanceY = $positionB["y"] - $this->y;
 
-        return sqrt($distanceX * $distance + $distanceY * $distanceY); //e
+        return sqrt($distanceX * $distance + $distanceY * $distanceY); //Por la fórmula de raiz cuadrada por a² y b² 
 
     }
 
